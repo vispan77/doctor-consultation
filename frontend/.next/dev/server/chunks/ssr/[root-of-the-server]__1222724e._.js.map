@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/visha/OneDrive/Desktop/Project/Doctor%20Appoiment/frontend/app/page.tsx"],"sourcesContent":["import Headers from \"@/components/landing/headers\";\nimport Image from \"next/image\";\nimport { useRouter } from \"next/navigation\";\nimport { useEffect } from \"react\";\n\nexport default function Home() {\n\n  const user = {\n    type: \"doctor\"\n  }\n\n  const router = useRouter();\n\n  useEffect(() => {\n    if(user.type === \"docter\"){\n      router.replace(\"/doctor/dashboard\")\n    }\n  }, [user, router]);\n\n  if(user?.type === \"docter\"){\n      return null;\n    }\n\n  return (\n    <div className=\"min-h-screen bg-white\">\n      <Headers showDashboardNav={false}/>\n\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;AAEA;AAAA;AACA;;;;;AAEe,SAAS;IAEtB,MAAM,OAAO;QACX,MAAM;IACR;IAEA,MAAM,SAAS,IAAA,kMAAS;IAExB,IAAA,kNAAS,EAAC;QACR,IAAG,KAAK,IAAI,KAAK,UAAS;YACxB,OAAO,OAAO,CAAC;QACjB;IACF,GAAG;QAAC;QAAM;KAAO;IAEjB,IAAG,MAAM,SAAS,UAAS;QACvB,OAAO;IACT;IAEF,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAQ,kBAAkB;;;;;;;;;;;AAIjC"}}]
+}
