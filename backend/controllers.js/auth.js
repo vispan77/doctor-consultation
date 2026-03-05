@@ -31,7 +31,6 @@ const doctorRegister = async (req, res) => {
         const doctor = await Doctor.create({
             ...req.body,
             password: hashedPassword,
-            isVerified: true
         });
 
         const token = generatetoken(doctor._id, "doctor");
@@ -109,7 +108,6 @@ const patientRegister = async (req, res) => {
         const patient = await Patient.create({
             ...req.body,
             password: hashedPassword,
-            isVerified: true
         });
 
         const token = generatetoken(patient._id, "patient");

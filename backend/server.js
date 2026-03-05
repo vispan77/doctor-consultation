@@ -7,6 +7,12 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const dbConnect = require("./config/dbConnect");
 const response = require("./middleware/response");
+const authRouter = require("./Routes/authRouter");
+const doctorRouter = require("./Routes/doctorRouter");
+const patientRouter = require("./Routes/patientRouter");
+const passportLib = require("passport");
+const passport = require('./config/passport');
+
 
 
 dotenv.config();
@@ -14,7 +20,7 @@ dotenv.config();
 
 //middleware
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
 
 //helmet is a security middleware for Express 
@@ -33,6 +39,16 @@ app.use(response);
 
 
 
+//router middleware
+app.use("/api/auth", authRouter);
+app.use("/api/doctor", doctorRouter);
+app.use("/api/patient", patientRouter);
+
+//initialise password
+app.use(passportLib.initialize());
+
+
+
 //db connection
 dbConnect();
 
@@ -40,7 +56,7 @@ dbConnect();
 
 
 app.get("/health", (req, res) => {
-    res.ok({time: new Date().toISOString()}, "OK")
+    res.ok({ time: new Date().toISOString() }, "OK")
 })
 
 const PORT = process.env.PORT || 8000;

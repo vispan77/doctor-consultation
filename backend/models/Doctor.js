@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 
 
-export const healthcareCategoriesList = [
+const healthcareCategoriesList = [
     "Primary Care",
     "Manage Your Condition",
     "Mental & Behavioral Health",

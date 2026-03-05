@@ -4,6 +4,11 @@ const validate = require("../middleware/validate");
 const { doctorRegister, doctorLogin, patientLogin, patientRegister, googleAuth, googleFailure, googleCallback } = require("../controllers.js/auth");
 const authRouter = express.Router();
 
+
+
+
+
+//mount router
 authRouter.post("/doctor/register",
     [
         body("name").notEmpty(),
@@ -22,10 +27,6 @@ authRouter.post("/doctor/login",
     validate,
     doctorLogin
 );
-
-
-
-
 
 authRouter.post("/patient/register",
     [
