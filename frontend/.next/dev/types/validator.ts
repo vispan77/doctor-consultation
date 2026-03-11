@@ -72,6 +72,42 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   type __Unused = __Check
 }
 
+// Validate ../../../app/(dashboard)/doctor/dashboard/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/doctor/dashboard">> = Specific
+  const handler = {} as typeof import("../../../app/(dashboard)/doctor/dashboard/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/(dashboard)/patient/dashboard/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/patient/dashboard">> = Specific
+  const handler = {} as typeof import("../../../app/(dashboard)/patient/dashboard/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/onboarding/doctor/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/onboarding/doctor">> = Specific
+  const handler = {} as typeof import("../../../app/onboarding/doctor/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/onboarding/patient/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/onboarding/patient">> = Specific
+  const handler = {} as typeof import("../../../app/onboarding/patient/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/">> = Specific
@@ -100,6 +136,15 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 {
   type __IsExpected<Specific extends LayoutConfig<"/">> = Specific
   const handler = {} as typeof import("../../../app/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/onboarding/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/onboarding">> = Specific
+  const handler = {} as typeof import("../../../app/onboarding/layout.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

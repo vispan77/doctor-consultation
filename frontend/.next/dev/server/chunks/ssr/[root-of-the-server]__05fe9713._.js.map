@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/visha/OneDrive/Desktop/Project/Doctor%20Appoiment/frontend/components/auth/AuthForm.tsx"],"sourcesContent":["import React from 'react'\r\n\r\ninterface AuthFormProps {\r\n    type: \"login\" | \"signup\";\r\n    userRole: \"patient\" | \"doctor\";\r\n}\r\n\r\nfunction AuthForm({ type, userRole }: AuthFormProps) {\r\n    return (\r\n        <div>\r\n\r\n        </div>\r\n    )\r\n}\r\n\r\nexport default AuthForm\r\n"],"names":[],"mappings":";;;;;;AAOA,SAAS,SAAS,EAAE,IAAI,EAAE,QAAQ,EAAiB;IAC/C,qBACI,8OAAC;;;;;AAIT;uCAEe"}},
+    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/visha/OneDrive/Desktop/Project/Doctor%20Appoiment/frontend/app/%28auth%29/login/patient/page.tsx"],"sourcesContent":["import AuthForm from '@/components/auth/AuthForm';\r\nimport React from 'react';\r\n\r\nexport const metadata = {\r\n  title: 'Patient Login - MediCare+',\r\n  description: 'Sign in to your MediCare+ account to access healthcare consultations.',\r\n};\r\n\r\nfunction page() {\r\n  return (\r\n    <div>\r\n      <AuthForm type=\"login\" userRole=\"patient\" />\r\n\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default page\r\n"],"names":[],"mappings":";;;;;;;AAAA;;;AAGO,MAAM,WAAW;IACtB,OAAO;IACP,aAAa;AACf;AAEA,SAAS;IACP,qBACE,8OAAC;kBACC,cAAA,8OAAC,0IAAQ;YAAC,MAAK;YAAQ,UAAS;;;;;;;;;;;AAItC;uCAEe"}}]
+}
